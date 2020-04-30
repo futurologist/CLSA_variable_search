@@ -7,6 +7,21 @@ our_var <- fread("path_to\\CLSA\\CLSA_vars\\Our_CLSA_variables.txt")
 
 ###################################### FUNCTIONS: ########################################
 
+######################### In cast one has the full datasets uploaded #####################
+
+get_our_vars <- function(tbl_list, dataset_list){
+  our_vars <- data.table(Name = names(tbl_list[[1]]), Dataset = rep(dataset_list[[1]], length(names(tbl_list[[1]]))))
+  i = 1
+  for(tbl in tbl_list[c(2:length(tbl_list))]){
+    i <- i+1 
+    hd <- data.table(Name = names(tbl), Dataset = rep(dataset_list[[i]], length(names(tbl))))
+    our_vars <- union(our_vars, hd)
+  }
+  return(our_vars)
+}
+
+###########################################################################################
+
 extract_vars <- function(tbl_all_vars, list_of_abbriv, mode_list, column){
   if(mode_list == 'and'){
     bool <- rep(TRUE, nrow(tbl_all_vars))
