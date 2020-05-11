@@ -7,7 +7,7 @@ our_var <- fread("path_to\\CLSA\\CLSA_vars\\Our_CLSA_variables.txt")
 
 ###################################### FUNCTIONS: ########################################
 
-######################### In cast one has the full datasets uploaded #####################
+######################## In case one has the full datasets uploaded in memory ############
 
 get_our_vars <- function(tbl_list, dataset_list){
   our_vars <- data.table(Name = names(tbl_list[[1]]), Dataset = rep(dataset_list[[1]], length(names(tbl_list[[1]]))))
