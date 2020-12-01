@@ -20,20 +20,14 @@ var_path <- "/home/ndimit2/CLSA/Extraction_script/quest_vars.txt"
 
 # type as strings in a string array, the paths to the four different LDSC datasets: Baseline COM and TRM, Follow Up 1 COF1 and TRF1, in that order:
 # if you are on the human pain genetic lab server, just LEAVE THIS AS IS 
-list_of_paths_in <- c("/mnt/nfs/backup/data/clsa/raw/190213/190213_McGill_LDiatchenko_Baseline_DRU_JULY2020/190213_McGill_LDiatchenko_CoP4_1_Baseline_DRU.csv", 
-                      "/mnt/nfs/backup/data/clsa/raw/190213/190213_McGill_LDiatchenko_Baseline_DRU_JULY2020/190213_McGill_LDiatchenko_Tra3_5_Baseline_DRU.csv",
-                      "/mnt/nfs/backup/data/clsa/raw/190213/190213_McGill_LDiatchenko_FUP1_DRU_JULY2020/190213_McGill_LDiatchenko_CoP3_FUP1_DRU.csv",
-                      "/mnt/nfs/backup/data/clsa/raw/190213/190213_McGill_LDiatchenko_FUP1_DRU_JULY2020/190213_McGill_LDiatchenko_Tra2_1_FUP1_DRU.csv")
+list_of_paths_in <- c(path_to_COM, path_to_TRM, path_to_COF1, path_to_TRF1)
 
 # leave this as is:
 names(list_of_paths_in) <- c('COM', 'TRM', 'COF1', 'TRF1')
 
 # type as strings in a string array, the paths you choose fo the four different outputs: 
 # Baseline COM and TRM, Follow Up 1 COF1 and TRF1, in that order:
-list_of_paths_out <- c("/home/ndimit2/CLSA/Phenotypes/Raw_tables/quest_vars_COM.tsv",
-                       "/home/ndimit2/CLSA/Phenotypes/Raw_tables/quest_vars_TRM.tsv",
-                       "/home/ndimit2/CLSA/Phenotypes/Raw_tables/quest_vars_COF1.tsv",
-                       "/home/ndimit2/CLSA/Phenotypes/Raw_tables/quest_vars_TRF1.tsv")
+list_of_paths_out <- c(path1, path2, path3, path4)
 
 # leave this as is:
 names(list_of_paths_out) <- c('COM', 'TRM', 'COF1', 'TRF1')
